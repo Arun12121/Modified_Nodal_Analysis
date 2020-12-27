@@ -245,12 +245,12 @@ extern "C" {
 
 char* MNA_solver(int ncomp, char* data)
 {
-    auto compsline = split(data, " ");
+    auto compsline = split(data, "/");
     int i, n = 0, rn = 0;
     vector<vector<string>> comps;
     for(i = 0; i < ncomp; i++)
     {
-        comps.push_back(split(compsline[i], "-"));
+        comps.push_back(split(compsline[i], " "));
         if(compsline[i][0]=='V' || compsline[i][0] == 'E')
             n++;
         else if(compsline[i][0]=='H')

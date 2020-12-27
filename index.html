@@ -6,7 +6,7 @@
         var Module = {
           onRuntimeInitialized: function() {
             const mna = Module.cwrap('MNA_solver', 'string', ['number', 'string']);
-            document.getElementById("answer").innerHTML =  mna(5, "R1 1 2 2\nR2 2 3 4\nR3 2 0 8\nV1 1 0 32\nV2 3 0 20");
+            document.getElementById("answer").innerHTML =  mna(5, "R1 1 2 2/R2 2 3 4/R3 2 0 8/V1 1 0 32/V2 3 0 20");
           },
         };
     </script>
